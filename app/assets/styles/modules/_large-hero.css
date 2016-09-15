@@ -1,0 +1,68 @@
+/* BEM  Block Element Modifier 
+block__element
+block--modfier
+*/
+.large-hero{
+    border-bottom: 10px solid $mainBlue;
+    position: relative;
+    
+    &__image{
+	display: block; /* par défaut les images sont inline */
+    }    
+
+
+    &__text-content{ /* le & sera remplacé par .large-hero */
+	position:absolute;
+	left:0;
+	width: 100%;
+	text-align:center;
+	/* centrer verticalement un texte*/
+	top: 50%; /* pousser de 50%*/
+	transform: translateY(-50%); /* remonter de 50% par rapport au centre*/
+    }
+
+    &__title{
+	font-weight: 300;
+	color: $mainBlue;
+	margin: 0;
+	font-size: 2.4rem;
+
+
+	@mixin atSmall {
+	    font-size: 4.8rem;
+	}
+	
+	
+    }
+
+    &__subtitle{
+	font-weight: 300;
+	color: $mainBlue;
+	margin: 0;
+	font-size: 1.5rem;
+
+	@mixin atSmall{
+	    font-size: 2.9rem;
+
+	}
+	
+    }
+
+    &__description{
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: 100; /* par défaut 400 */
+	text-shadow: 2px 2px 0 rgba(0,0,0,.1); /* 0 blurr */
+	/* faire descendre le texte après journeys */
+	max-width: 30rem; /* 480 / 16 = 30 */
+	margin-left: auto; /* centré le texte */
+	margin-right: auto; /* centré le texte ne pas toucher au top et bottom */
+
+	@mixin atSmall{
+	    font-size: 1.875rem;
+
+	}
+	
+    }
+
+}

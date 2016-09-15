@@ -1,0 +1,41 @@
+.row{
+
+    @mixin clearfix;
+
+    @mixin atMedium{
+	&__medium-4{
+	    float:left;
+	    width:33.33%;
+	}
+
+	&__medium-4--larger{
+	    width:37%;
+	}
+	&__medium-8{
+	    float: left;
+	    width:66.66%;
+	}
+	&__medium-8--smaller{
+	    width:63%;
+	}
+
+	&__b-margin-until-medium{
+	    margin-bottom:0;
+	}
+    }
+
+    &__b-margin-until-medium{
+	margin-bottom: 1rem;
+    }
+    
+    &--gutters{
+	margin-right: -65px; /* enlever le gutter tout à droite */
+	
+    }
+    
+    &--gutters > div{ /* les enfants de la row--gutters */
+	padding-right: 65px; /* augmente la taille et dépasse on regle par border-box 
+qu'on appliquera globalement*/
+	
+    }
+}
