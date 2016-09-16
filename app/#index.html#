@@ -85,7 +85,7 @@
 	  <div class="row__medium-6">
 	    
 	    <div class="feature-item">
-
+	      
 	      <span class="icon icon--rain feature-item__icon"></span>
 	      <h3 class="feature-item__title">We&rsquo;ll Watch the Weather</h3>
 	      
@@ -132,7 +132,7 @@
 	  Real <strong>Testimonials</strong></h2>
 	
 	<div class="row row--gutters row--gutters-small row-equal-height-at-large row--t-padding generic-content-container">
-
+	  
 	  <div class="row__medium-4">
 	    <div class="testimonial">
 	      <div class="testimonial__photo">
@@ -174,11 +174,11 @@
     </div>
     
     <footer class="site-footer">
-
+      
       <div class="wrapper">
 	
-      <p><span class="site-footer__text">Copyright &copy; 2016 Clear View Escapes. All rights reserved.</span>
-	<a class="btn btn--orange" href="#">Get in Touch</a></p>
+	<p><span class="site-footer__text">Copyright &copy; 2016 Clear View Escapes. All rights reserved.</span>
+	  <a class="btn btn--orange" href="#">Get in Touch</a></p>
       </div>
     </footer>
   </body>

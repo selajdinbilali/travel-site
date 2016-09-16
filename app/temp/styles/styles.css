@@ -1067,3 +1067,25 @@ background-position: 68.79227053140097% 0; /* voir le site du plugin svg-sprite 
     height: 42px;
 background-position: 36.69752421959096% 45.792307692307695%; /* voir le site du plugin svg-sprite */
 }
+
+.site-footer{
+    background-color: #2f5572;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align:center;
+}
+
+.site-footer__text{
+  display:block;
+  margin-bottom: 1rem;
+  font-weight: 200;
+}
+
+@media (min-width: 800px) {
+
+  .site-footer__text {
+    display: inline;
+    margin-bottom: 0;
+    margin-right: 1.4rem;
+  }
+}
