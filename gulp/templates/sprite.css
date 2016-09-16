@@ -1,0 +1,18 @@
+
+/* moustache template system */
+/* boucle */
+
+
+{{#shapes}}
+{{#first}}
+.icon{
+    background-image: url('/assets/images/sprites/{{{sprite}}}'); /* car le paquet ajoute un random string */
+}
+
+{{/first}}
+.icon--{{base}} {
+    width: {{width.outer}}px;
+    height: {{height.outer}}px;
+background-position: {{position.relative.xy}}; /* voir le site du plugin svg-sprite */
+}
+ {{/shapes}}
