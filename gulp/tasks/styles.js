@@ -4,7 +4,9 @@ var gulp = require('gulp'),
     mixins = require('postcss-mixins'),
     cssvars = require('postcss-simple-vars'),
     nested = require('postcss-nested'),
-    cssImport = require('postcss-import');
+    cssImport = require('postcss-import'),
+    hexrgba = require('postcss-hexrgba');
+
 
 gulp.task('styles', function(){
     // error handlin .on
@@ -14,7 +16,7 @@ gulp.task('styles', function(){
     // dest ()
     // retur car gulp.src est asynchrone
     return gulp.src('./app/assets/styles/styles.css')
-	.pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer])) // array des choses à faire
+	.pipe(postcss([cssImport, mixins, cssvars, nested, hexrgba, autoprefixer])) // array des choses à faire
 	.on('error', function(errorInfo){ // affichage de l'erreur
 	    console.log(errorInfo.toString());
 	    this.emit('end');

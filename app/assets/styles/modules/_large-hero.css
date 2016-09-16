@@ -12,6 +12,7 @@ block--modfier
 
 
     &__text-content{ /* le & sera remplacé par .large-hero */
+	padding-top: 88px;
 	position:absolute;
 	left:0;
 	width: 100%;
@@ -19,6 +20,10 @@ block--modfier
 	/* centrer verticalement un texte*/
 	top: 50%; /* pousser de 50%*/
 	transform: translateY(-50%); /* remonter de 50% par rapport au centre*/
+
+	@mixin atMedium{
+	    padding-top:60px;
+	}
     }
 
     &__title{

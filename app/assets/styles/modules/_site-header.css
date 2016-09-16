@@ -1,0 +1,65 @@
+.site-header{
+    /* le header est au dessus de large hero sur le site */
+    position: absolute; /* prend seulement la place nécessaire pour remplir son contenu */
+    z-index:2;
+    width:100%;
+    padding: 10px 0px;
+
+
+    /* afficher le nav que pour les grands */
+    @mixin atMedium{
+	background-color: rgba($mainBlue,.3); /* comment trouver rgba postcss-hexrgba */
+
+    }
+    
+    &__btn-container{
+	float:right;
+    }
+
+    &__logo{
+	position:absolute;
+	background-color: $mainBlue;
+	padding: 25px 36px;
+	top: 0;
+	/* pour centrer le logo */
+	/* on le déplace de 50% de la longueur du parent vers la gauche */
+	left: 50%;
+	/* mais comme le point est au centre du bloque on revient de en arrière
+        de 50% de la taille du bloque */
+	transform: translateX(-50%) scale(.8); /* scale pour rétrécir le logo */
+	transform-origin: 50% 0; /* on déplace le centre de gravité en haut au milieu */
+
+	@mixin atMedium{
+	    left:auto;
+	    transform: translateX(0);
+	}
+    }
+
+    &__logo__graphic{
+	text-indent: -9999px; /* cache le texte */
+    }
+
+
+    &__menu-icon{
+	width:20px;
+	height: 20px;
+	background-color:#fff;
+	position:absolute;
+	top:20px;
+	right:10px;
+
+	@mixin atMedium{
+	    display:none;
+	}
+	
+    }
+
+    /* cache le menu quand l'écran est petit et l'affiche quand il est medium */
+    &__menu-content{
+	display:none;
+
+	@mixin atMedium{
+	    display:block;
+	}
+    }
+}
