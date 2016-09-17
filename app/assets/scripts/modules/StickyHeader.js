@@ -4,6 +4,7 @@ import smoothScroll from 'jquery-smooth-scroll';
 
 class StickyHeader{
     constructor(){
+	this.lazyImages = $(".lazyload"); // selectionne les lazyload pour regle les pbs avec waypoints
 	this.siteHeader = $(".site-header");
 	this.headerTriggerElement = $(".large-hero__title");
 	this.createHeaderWaypoint();
@@ -11,11 +12,20 @@ class StickyHeader{
 	this.headerLinks = $(".primary-nav a");
 	this.createPageSectionWaypoints();
 	this.addSmoothScrolling();
+	this.refreshWaypoints();
     }
 
+    refreshWaypoints(){
+	this.lazyImages.load(function(){
+	    Waypoint.refreshAll();
+	});
+    }
+    
     addSmoothScrolling(){
 	this.headerLinks.smoothScroll();
     }
+
+    
 
     createHeaderWaypoint(){
 	var that = this;
@@ -46,9 +56,9 @@ class StickyHeader{
 			$(matchingHeaderLink).addClass("is-current-link");
 		    }
 		},
-		offset: "18%"
+		offset: "30%"
 	    });
-	    	    new Waypoint({
+	    new Waypoint({
 		element: currentPageSection,
 		handler: function(direction){
 		    if(direction == "up"){
@@ -57,12 +67,12 @@ class StickyHeader{
 			$(matchingHeaderLink).addClass("is-current-link");
 		    }
 		},
-		offset: "-40%"
+		offset: "-10%"
 	    });
-	    		    
+	    
 
-	    		    
-		    
+	    
+	    
 
 	});
     }
