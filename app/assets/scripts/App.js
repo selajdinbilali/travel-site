@@ -1,3 +1,3 @@
+import MobileMenu from './modules/MobileMenu'; /* pas besoin du .js */
 
-
-alert("toto2");
+var mobileMenu = new MobileMenu();
