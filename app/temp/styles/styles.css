@@ -639,7 +639,7 @@ block--modfier
 @media (min-width: 1010px) {
 
   .page-section--testimonials.lazyloaded {
-    background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+    background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
     background-size: cover;
   }
 }
@@ -1012,11 +1012,11 @@ qu'on appliquera globalement*/
 /* boucle */
 
 .icon{
-    background-image: url('/assets/images/sprites/sprite-8eb89099.svg'); /* car le paquet ajoute un random string */
+    background-image: url('../../assets/images/sprites/sprite-8eb89099.svg'); /* car le paquet ajoute un random string */
 }
 
 .no-svg .icon{
-    background-image: url('/assets/images/sprites/sprite-8eb89099.png'); /* car le paquet ajoute un random string */
+    background-image: url('../../assets/images/sprites/sprite-8eb89099.png'); /* car le paquet ajoute un random string */
     
 }
 

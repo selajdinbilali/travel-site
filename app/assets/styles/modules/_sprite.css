@@ -4,11 +4,11 @@
 
 
 .icon{
-    background-image: url('/assets/images/sprites/sprite-8eb89099.svg'); /* car le paquet ajoute un random string */
+    background-image: url('../../assets/images/sprites/sprite-8eb89099.svg'); /* car le paquet ajoute un random string */
 }
 
 .no-svg .icon{
-    background-image: url('/assets/images/sprites/sprite-8eb89099.png'); /* car le paquet ajoute un random string */
+    background-image: url('../../assets/images/sprites/sprite-8eb89099.png'); /* car le paquet ajoute un random string */
     
 }
 
