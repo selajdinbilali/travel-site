@@ -51,15 +51,69 @@
 
     &__menu-icon{
 	width:20px;
-	height: 20px;
-	background-color:#fff;
+	height: 19px;
 	position:absolute;
 	top:20px;
 	right:10px;
 	z-index:10;
 
+
+	&::before{ /*sudo element */
+	    content:"";
+	    position:absolute;
+	    top:0;
+	    left: 0px;
+	    width: 20px;
+	    height: 3px;
+	    background-color: #fff;
+	    transform-origin: 0 0; /* centre de gravité en haut à gauche */
+	    transition: transform .3s ease-out;
+	}
+
+	&__middle{
+	    position:absolute;
+	    top:8px;
+	    left: 0px;
+	    width: 20px;
+	    height: 3px;
+	    background-color: #fff;
+	    transition: all .3s ease-out;
+	    transform-origin: 0 50%;
+
+	}
+
+	&::after{
+	    content:"";
+	    position:absolute;
+	    bottom:0;
+	    left: 0px;
+	    width: 20px;
+	    height: 3px;
+	    background-color: #fff;
+   	    transform-origin: 0 100%; /* centre de gravité en bas à droite */
+	    transition: transform .3s ease-out;
+
+
+	}
+
+	
 	@mixin atMedium{
 	    display:none;
+	}
+	
+    }
+
+    /* faire un x */
+    &__menu-icon--close-x{
+	&::before{
+	    transform:rotate(45deg) scaleX(1.25); /* ne pas oublier deg scaleX augmente la taille en X*/ 
+	}
+	&::after{
+	    transform:rotate(-45deg) scaleX(1.25) translateY(1px); /* tranlate bouge un peu vers le bas */
+	}
+	.site-header__menu-icon__middle{
+	    opacity:0;
+	    transform: scaleX(0);
 	}
 	
     }
