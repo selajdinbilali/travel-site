@@ -12,7 +12,13 @@
 
     /* afficher le nav que pour les grands */
     @mixin atMedium{
+	position:fixed;
 	background-color: rgba($mainBlue,.3); /* comment trouver rgba postcss-hexrgba */
+
+	/* assombri pendant la descente */
+	&--dark{
+	    background-color: rgba(23,51,72,.85);
+	}
 
     }
     
@@ -37,10 +43,16 @@
         de 50% de la taille du bloque */
 	transform: translateX(-50%) scale(.8); /* scale pour rétrécir le logo */
 	transform-origin: 50% 0; /* on déplace le centre de gravité en haut au milieu */
+	transition: transform .3s ease-out;
 
 	@mixin atMedium{
 	    left:auto;
 	    transform: translateX(0);
+/* logo que quand dark est utilisé */
+	    .site-header--dark &{
+		/* réduire la taille du logo quand on descent */
+		transform: scale(.57);
+	    }
 	}
     }
 

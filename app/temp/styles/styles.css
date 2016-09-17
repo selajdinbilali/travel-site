@@ -1121,7 +1121,12 @@ background-position: 36.69752421959096% 45.792307692307695%; /* voir le site du 
 @media (min-width: 800px) {
 
   .site-header {
-    background-color: rgba(47,85,114,.3);/* comment trouver rgba postcss-hexrgba */
+    position: fixed;
+    background-color: rgba(47,85,114,.3);/* comment trouver rgba postcss-hexrgba *//* assombri pendant la descente */
+  }
+
+  .site-header--dark {
+    background-color: rgba(23,51,72,.85);
   }
 }
 
@@ -1142,17 +1147,24 @@ background-position: 36.69752421959096% 45.792307692307695%; /* voir le site du 
   -webkit-transform: translateX(-50%) scale(.8);
           transform: translateX(-50%) scale(.8);/* scale pour rétrécir le logo */
   -webkit-transform-origin: 50% 0;
-          transform-origin: 50% 0;
+          transform-origin: 50% 0;/* on déplace le centre de gravité en haut au milieu */
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 }
-
-/* on déplace le centre de gravité en haut au milieu */
 
 @media (min-width: 800px) {
 
   .site-header__logo {
     left: auto;
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+            transform: translateX(0);/* logo que quand dark est utilisé */
+  }
+
+  .site-header--dark .site-header__logo {/* réduire la taille du logo quand on descent */
+    -webkit-transform: scale(.57);
+            transform: scale(.57);
   }
 }
 
@@ -1343,8 +1355,13 @@ background-position: 36.69752421959096% 45.792307692307695%; /* voir le site du 
 @media (min-width: 800px) {
 
   .primary-nav a {
+    font-size: 1rem;
     padding: 12px 0px;
     background-color: transparent;
+  }
+
+  .primary-nav a.is-current-link {
+    color: #fabb69;
   }
 }
 
