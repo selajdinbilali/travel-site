@@ -51,7 +51,7 @@
 /* logo que quand dark est utilisé */
 	    .site-header--dark &{
 		/* réduire la taille du logo quand on descent */
-		transform: scale(.57);
+		transform: scale(.56);
 	    }
 	}
     }

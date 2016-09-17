@@ -9,6 +9,11 @@
     background-image: url('/assets/images/sprites/{{{sprite}}}'); /* car le paquet ajoute un random string */
 }
 
+.no-svg .icon{
+    background-image: url('/assets/images/sprites/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}'); /* car le paquet ajoute un random string */
+    
+}
+
 {{/first}}
 .icon--{{base}} {
     width: {{width.outer}}px;
